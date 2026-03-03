@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 19teen Chotedonn 🎂</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9ccf, #ff69b4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    animation: fadeIn 2s ease-in-out;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 38px;
+    animation: glow 2s infinite alternate;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #ff1493;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 18px;
+    min-height: 120px;
+}
+
+.signature {
+    margin-top: 30px;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+}
+
+.spotify {
+    margin-top: 25px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes glow {
+    from {text-shadow: 0 0 10px white;}
+    to {text-shadow: 0 0 25px yellow;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🌸 Happy 19teen Sahithi (Chotedonn) 🌸</h1>
+    <p>5th March – Last year of teenage madness 😌</p>
+
+    <button onclick="startSurprise()">Click Here Chotedonn 💖</button>
+
+    <div class="message" id="typedText"></div>
+    <div class="signature" id="signature"></div>
+
+    <div class="spotify">
+        <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/track/3U9bYReA0fJd9fM7gNnZrP?utm_source=generator"
+        width="100%" height="80" 
+        frameBorder="0" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+    </div>
+</div>
+
+<script>
+function startSurprise() {
+
+    // Floating hearts effect
+    for(let i=0;i<50;i++){
+        let heart=document.createElement("div");
+        heart.innerHTML="💗";
+        heart.style.position="absolute";
+        heart.style.top=Math.random()*100+"%";
+        heart.style.left=Math.random()*100+"%";
+        heart.style.fontSize="20px";
+        heart.style.opacity=Math.random();
+        document.body.appendChild(heart);
+    }
+
+    const message = "Happiest birthday my chotedonn, have lots of fun on your special day. It's your last year of teen age 19teen !! Make it Remembariable ! This is a small surprise from my side ";
+
+    let i = 0;
+    function typeWriter() {
+        if (i < message.length) {
+            document.getElementById("typedText").innerHTML += message.charAt(i);
+            i++;
+            setTimeout(typeWriter, 40);
+        } else {
+            document.getElementById("signature").innerHTML = "Jason Abel 💫";
+        }
+    }
+
+    typeWriter();
+}
+</script>
+
+</body>
+</html>
